@@ -1,9 +1,16 @@
-import "./styles.css";
+let nArray: number = Number(prompt("ingrese la cantidad de nombres a cargar:"));
+let arrayName: string[] = new Array(nArray);
+let i: number;
 
-document.getElementById("app").innerHTML = `
-<h1>Hello Vanilla!</h1>
-<div>
-  We use the same configuration as Parcel to bundle this sandbox, you can find more
-  info about Parcel 
-  <a href="https://parceljs.org" target="_blank" rel="noopener noreferrer">here</a>.
-</div>`;
+for (i = 0; i < nArray; i++) {
+  arrayName[i] = prompt(
+    "ingrese el nombre que desea colocar ena la posicion: " + i
+  );
+}
+
+for (i = 0; i < nArray; i++) {
+  console.log(
+    "el nommbre que usted ingreso en la posicion " + i,
+    "es: " + arrayName[i]
+  );
+}
